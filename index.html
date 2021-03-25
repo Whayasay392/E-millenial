@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="widp=device-widp, initial-scale=1.0">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    
+    <title>Ustacky Ecommerce</title>
+</head>
+<body>
+    <main>
+        <!-- intro section -->
+        <section class="intro-section">
+            <div class="inner-div">
+                  <!-- nav list -->
+            <nav class="upper-nav">
+                <img src="/assets/Images/EMS.svg" alt="logo" class="brand-logo">
+                <ul>
+                    <li class="menu-list"><a href="">Intro</a></li>
+                    <li class="menu-list"><a href="">About</a> </li>
+                    <li class="menu-list"><a href="">Shop</a></li>
+                </ul>
+
+                <!-- cart section -->
+                <!-- <section class="cart-section">
+                    <img id="cart-img" src="/assets/Images/cart.svg" alt="cart">
+                    <span id="span-count">0</span>
+                </section> -->
+                <a href="#openModal"  class="cart-section">
+                    <img id="cart-img" src="/assets/Images/cart.svg" alt="cart">
+                    <span id="total-count"></span>
+                </a>
+            </nav>
+        <!-- hero section -->
+                <section id="hero-section">
+                    <!-- left hero -->
+                    <div class="left-hero">
+                        <h1 class="hero-text">THE E-MILLENIAL STORE</h1>
+                    </div>
+                    <!-- right hero -->
+                    <div class="right-hero">
+                    <img id="hero-img" src="/assets/Images/heroImage.svg" alt="hero-img">
+                    </div>
+                </section>
+                <div class="hero-btn-div">
+                    <button class="hero-btn">SHOP NOW</button>
+                </div>
+
+            </div>
+           
+                <!-- End of intro section -->
+        </section>
+
+        <!-- About section -->
+        <section id="about-section">
+            <div class="inner-div">
+                <p class="about-text">E-millenial Store is an hypopetical online store for gadgets we believe every 'Millenial' or 'Gen-Z' should have today. We've got mobile phones, laptops, smartwatches and oper gadgets. Explore all our gadgets and choose pe ones pat suit you.</p>
+            </div>
+        </section>
+
+            <!-- Shop section -->
+            <section id="shop-section">
+                <div class="inner-div">
+                    <h2 class="shop-heading">OUR GADGETS</h2>
+                    <!-- shop boxes cover -->
+                    <section class="shop-cover">
+                        <!-- box one -->
+                        <div class="box-one">
+                            <img id="shop-img" src="/assets/Images/product1.png" alt="samsung">
+                            <h4 class="product-details">SAMSUNG TV</h4>
+                            <!-- <a href="#"  class="product-btn" data-price="300000">ADD TO CART</a> -->
+                            <button class="product-btn" onclick="textChange()" >ADD TO CART</button>
+                        </div>
+                        <!-- box two -->
+                        <div class="box-two">
+                            <img id="shop-img" src="/assets/Images/product2.png" alt="pixel">
+                            <h4 class="product-details">PIXEL 4a</h4>
+                            
+                            <button class="product-btn"  onclick="textChange()">ADD TO CART</button>
+                        </div>
+                        <!-- box three -->
+                        <div class="box-three">
+                            <img id="shop-img" src="/assets/Images/product3.png" alt="ps5">
+                            <h4 class="product-details">PS 5</h4>
+                            
+                            <button class="product-btn"  onclick="textChange()">ADD TO CART</button>
+                        </div>
+                        <!-- box four -->
+                        <div class="box-four">
+                            <img id="shop-img" src="/assets/Images/product4.png" alt="macbook">
+                            <h4 class="product-details">MACBOOK AIR</h4>
+                            
+                            <button class="product-btn"  onclick="textChange()">ADD TO CART</button>
+                        </div>
+                        <!-- box five -->
+                        <div class="box-five">
+                            <img id="shop-img" src="/assets/Images/product5.png" alt="watch">
+                            <h4 class="product-details">APPLE WATCH</h4>
+                            
+                            <button class="product-btn" onclick="textChange()">ADD TO CART</button>
+                        </div>
+                        <!-- box six -->
+                        <div class="box-six">
+                            <img id="shop-img" src="/assets/Images/product6.png" alt="airpods">
+                            <h4 class="product-details">AIR PODS</h4>
+                            
+                            <button class="product-btn" onclick="textChange()">ADD TO CART</button>
+                        </div>
+
+                    </section>
+                </section>
+
+                  </div>
+
+                    <!-- Modal -->
+
+                    <section id="openModal" class="modalDialog" >
+                        <div><a href="#close" title="Close" class="close">X</a>
+                            
+                            <section id="modal-table">
+                            <div class="product-header">
+                                    <!-- <p class="serial-number">S/N</p> -->
+                                    <p class="product-item">Item</p>
+                                    <p class="product-price">Price</p>
+                                    <p class="product-quantity">Quantity</p>
+                            </div>
+                               
+                                    <div class="cart-items">
+
+                                    </div>        
+
+
+
+                            </section>
+                           
+                                    
+                                    <div class="modal-input-cover">
+                                        <input class="modal-input"  id="buyers-name" type="text" placeholder="Your Name">
+                                        <input class="modal-input" id="email-address" type="email" placeholder="Your Email">
+                                        <input class="modal-input" id="phone-no" type="number" placeholder="Your Phone number">
+                                    </div>
+                                    <div class="total-product">
+                                        <h5>Total Amount to be paid</h5>
+                                        <p class="total-cart">&#8358</p>
+                                        </div>
+
+                                        <div class="modal-footer">
+                                            <a href="#close" class="shopping-btn">Continue Shopping</a>
+                                            <button type="button" class="checkout-btn" onclick="payWithPaystack()">Checkout</button>
+                                          </div>
+                               
+                        </div>
+            </section>
+       
+    </main>
+
+    <!-- Footer section -->
+    <footer class="footer-section">
+        <div class="inner-div">
+            <section class="footer-container">
+                <div class="left-footer-div">
+                    <img src="/assets/Images/EMS.svg" alt="footerlogo">
+                </div>
+                <div class="right-footer-div">
+                    <p class="footer-text">Designed and Created by Whayasay</p>
+                </div>
+            </section>
+        </div>
+    </footer>
+    <script src="https://js.paystack.co/v1/inline.js"></script> 
+    <script src="/assets/js/script.js"></script>
+   
+</body>
+</html>

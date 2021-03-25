@@ -461,12 +461,12 @@ h5  {
 } */
 .shopping-btn   {
     padding: 6px 0.7rem;
-    width: 36%;
+    width: 40%;
     font-size: 0.7rem;
 }
 .checkout-btn   {
     padding: 6px 0.7rem;
-    width: 36%;
+    width: 38%;
     font-size: 0.7rem;
 }
 
@@ -478,7 +478,7 @@ h5  {
 
 }
 .cart-items  {
-
+    border: 1px solid black
 }
 #item-name  {
     flex-basis: 30%;
@@ -502,7 +502,7 @@ h5  {
 
 .increment, .decrement  {
     
-    margin:  0.5rem 0.6rem ;
+    margin:  0.5rem  ;
     font-size: 0.8rem;
    
 }
@@ -513,7 +513,7 @@ h5  {
 .remove-product  {
    
     margin:  0.5rem 0 ;
-    margin-left: 1rem;
+    margin-left: 0.7rem;
     font-size: 0.7rem;
 }
 
@@ -596,3 +596,11 @@ h5  {
 }
 
 } 
+
+
+/* Iphone x     */
+@media only screen and (device-width: 375px) and (device-height: 812px) and (-webkit-devive-pixel-ratio :3) {
+    #modal-table  {
+        border: 1px solid black;
+    }
+}

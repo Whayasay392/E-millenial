@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="widp=device-widp, initial-scale=1.0">
     <link rel="stylesheet" href="/assets/css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     
     <title>Ustacky Ecommerce</title>
 </head>
@@ -16,9 +17,9 @@
             <nav class="upper-nav">
                 <img src="/assets/Images/EMS.svg" alt="logo" class="brand-logo">
                 <ul>
-                    <li class="menu-list"><a href="">Intro</a></li>
-                    <li class="menu-list"><a href="">About</a> </li>
-                    <li class="menu-list"><a href="">Shop</a></li>
+                    <li class="menu-list"><a href="#hero-section">Intro</a></li>
+                    <li class="menu-list"><a href="#about-section">About</a> </li>
+                    <li class="menu-list"><a href="#shop-section">Shop</a></li>
                 </ul>
 
                 <!-- cart section -->
@@ -26,7 +27,7 @@
                     <img id="cart-img" src="/assets/Images/cart.svg" alt="cart">
                     <span id="span-count">0</span>
                 </section> -->
-                <a href="#openModal"  class="cart-section">
+                <a href="#openModal"  class="cart-section" onclick="cartReload()">
                     <img id="cart-img" src="/assets/Images/cart.svg" alt="cart">
                     <span id="total-count"></span>
                 </a>
@@ -35,7 +36,7 @@
                 <section id="hero-section">
                     <!-- left hero -->
                     <div class="left-hero">
-                        <h1 class="hero-text">THE E-MILLENIAL STORE</h1>
+                        <h1 class="hero-text">THE <br> E-MILLENIAL STORE</h1>
                     </div>
                     <!-- right hero -->
                     <div class="right-hero">
@@ -43,7 +44,7 @@
                     </div>
                 </section>
                 <div class="hero-btn-div">
-                    <button class="hero-btn">SHOP NOW</button>
+                    <button href="#shop-section" class="hero-btn">SHOP NOW</button>
                 </div>
 
             </div>
@@ -54,7 +55,7 @@
         <!-- About section -->
         <section id="about-section">
             <div class="inner-div">
-                <p class="about-text">E-millenial Store is an hypopetical online store for gadgets we believe every 'Millenial' or 'Gen-Z' should have today. We've got mobile phones, laptops, smartwatches and oper gadgets. Explore all our gadgets and choose pe ones pat suit you.</p>
+                <p class="about-text">E-millenial Store is an hypopetical online store for gadgets we believe every 'Millenial' or 'Gen-Z' should have today. We've got mobile phones, laptops, smartwatches and oper gadgets. Explore all our gadgets and choose the ones that suit you.</p>
             </div>
         </section>
 
@@ -63,7 +64,7 @@
                 <div class="inner-div">
                     <h2 class="shop-heading">OUR GADGETS</h2>
                     <!-- shop boxes cover -->
-                    <section class="shop-cover">
+                    <section class="shop-cover" id="">
                         <!-- box one -->
                         <div class="box-one">
                             <img id="shop-img" src="/assets/Images/product1.png" alt="samsung">
@@ -141,11 +142,12 @@
                                     </div>
                                     <div class="total-product">
                                         <h5>Total Amount to be paid</h5>
-                                        <p class="total-cart">&#8358</p>
+                                        <p class="total-cart">£</p>
                                         </div>
 
                                         <div class="modal-footer">
-                                            <a href="#close" class="shopping-btn">Continue Shopping</a>
+                                            <button class="clear-cart" onclick="storageClear()">Clear cart</button>
+                                            <a href="#close" class="shopping-btn" >Continue Shopping</a>
                                             <button type="button" class="checkout-btn" onclick="payWithPaystack()">Checkout</button>
                                           </div>
                                

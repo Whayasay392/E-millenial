@@ -1,5 +1,16 @@
 var cart = document.querySelectorAll('.product-btn');
 
+let shoppingBtn = document.querySelector('.clear-cart');
+
+
+// cartReload = () =>  location.reload();
+
+storageClear = () =>  {
+    window.localStorage.clear();
+    location.reload();
+}
+
+
 textChange = () =>  {
     var cart = document.querySelectorAll('.product-btn');
     cart.innerHTML = "Added to cart";
@@ -9,42 +20,42 @@ var products = [
     {
         name: 'Samsung Tv',
         tag: 'television',
-        price: 89000,
+        price: 850,
         inCart: 0
 
     },
     {
         name: 'Pixel 4a',
         tag: 'pixel',
-        price: 110000,
+        price: 220,
         inCart: 0
 
     },
     {
         name: 'PS5',
         tag: 'ps5',
-        price: 500000,
+        price: 600,
         inCart: 0
 
     },
     {
         name: 'Macbook Air',
         tag: 'Macbook',
-        price: 350000,
+        price: 1099,
         inCart: 0
 
     },
     {
         name: 'Apple Watch',
         tag: 'watch',
-        price: 160000,
+        price: 350,
         inCart: 0
 
     },
     {
         name: 'Airpods',
         tag: 'Airpods',
-        price: 200000,
+        price: 200,
         inCart: 0
 
     },
@@ -133,8 +144,8 @@ displayCart=() => {
             <div class="product-item" id="item-name">
             ${item.name}</div>
             <div id="price" class="product-price">
-            #${item.price}</div>
-            <div class="product-quantity"><button class="decrement">-</button><span class="product-qty">${item.inCart}</span><button class="increment">+</button></div>
+            £${item.price}</div>
+            <div class="product-quantity"><button class="decrement" >-</button><span class="product-qty">${item.inCart}</span><button class="increment">+</button></div>
             <div><button class="remove-product">Remove</button></div>
             `;
        });
@@ -169,3 +180,6 @@ function payWithPaystack() {
     });
     handler.openIframe();
   }
+
+
+ 

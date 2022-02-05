@@ -20,42 +20,42 @@ var products = [
     {
         name: 'Samsung Tv',
         tag: 'television',
-        price: 850,
+        price: 450000,
         inCart: 0
 
     },
     {
         name: 'Pixel 4a',
         tag: 'pixel',
-        price: 220,
+        price: 180000,
         inCart: 0
 
     },
     {
         name: 'PS5',
         tag: 'ps5',
-        price: 600,
+        price: 500000,
         inCart: 0
 
     },
     {
         name: 'Macbook Air',
         tag: 'Macbook',
-        price: 1099,
+        price: 750000,
         inCart: 0
 
     },
     {
         name: 'Apple Watch',
         tag: 'watch',
-        price: 350,
+        price: 120000,
         inCart: 0
 
     },
     {
         name: 'Airpods',
         tag: 'Airpods',
-        price: 200,
+        price: 80000,
         inCart: 0
 
     },
@@ -144,7 +144,7 @@ displayCart=() => {
             <div class="product-item" id="item-name">
             ${item.name}</div>
             <div id="price" class="product-price">
-            £${item.price}</div>
+            #${item.price}</div>
             <div class="product-quantity"><button class="decrement" >-</button><span class="product-qty">${item.inCart}</span><button class="increment">+</button></div>
             <div><button class="remove-product">Remove</button></div>
             `;

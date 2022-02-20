@@ -84,11 +84,11 @@ a   {
 
 #hero-img   {
     width: 100%;
-    animation: rotate 9s linear infinite;
+    /* animation: rotate 9s linear infinite; */
 }
-@keyframes rotate { to{transform: rotate(360deg);}
+/* @keyframes rotate { to{transform: rotate(360deg);}
     
-}
+} */
 .hero-btn-div   {   
     display: flex;
     justify-content: center;

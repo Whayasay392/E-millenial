@@ -3,8 +3,33 @@ var cart = document.querySelectorAll('.product-btn');
 let shoppingBtn = document.querySelector('.clear-cart');
 
 
-// cartReload = () =>  location.reload();
+//  cartReload = () =>  location.reload();
 
+let cartItemIncrease = document.querySelectorAll('increment');
+let cartItemDecrease = document.getElementsByClassName('decrement');
+
+function incrementValue()
+{
+    // var value = parseInt(document.getElementsByClassName('product-qty').value, 10);
+    // value = isNaN(value) ? 0 : value;
+    // if(value<10){
+    //     value++;
+    //         document.getElementsByClassName('product-qty').value = value;
+    // }
+    alert('i got u' )
+}
+function decrementValue()
+{
+    // var value = parseInt(document.getElementsByClassName('product-qty').value, 10);
+    // value = isNaN(value) ? 0 : value;
+    // if(value>1){
+    //     value--;
+    //         document.getElementsByClassName('product-qty').value = value;
+    // }
+    alert('i see you')
+
+}
+ 
 storageClear = () =>  {
     window.localStorage.clear();
     location.reload();
@@ -12,7 +37,7 @@ storageClear = () =>  {
 
 
 textChange = () =>  {
-    var cart = document.querySelectorAll('.product-btn');
+   
     cart.innerHTML = "Added to cart";
 }
 
@@ -68,7 +93,13 @@ for (let i=0; i<cart.length; i++) {
         totalCost(products[i])
     })
 }
-
+// for (let i=0; i<cartItemIncrease.length; i++) {
+//         cartItemIncrease[i].addEventListener('click', () => {
+//             cartNumbers(products[i]);
+//             totalCost(products[i])
+//         })
+//     }
+    
 onLoadCartNumbers = () => {
     let productNumbers = localStorage.getItem('cartNumbers');
     
@@ -135,7 +166,6 @@ displayCart=() => {
     let cartCost = localStorage.getItem('totalCost')
 
     if(cartItems && modalContents)  {
-        // console.log('smoothing');
         modalContents.innerHTML = '';
         Object.values(cartItems).map(item => {
           // <div class="serial-number"><div>
@@ -145,7 +175,7 @@ displayCart=() => {
             ${item.name}</div>
             <div id="price" class="product-price">
             #${item.price}</div>
-            <div class="product-quantity"><button class="decrement" >-</button><span class="product-qty">${item.inCart}</span><button class="increment">+</button></div>
+            <div class="product-quantity"><button class="decrement" onclick="decrementValue()" >-</button><span class="product-qty" value="1">${item.inCart}</span><button class="increment"  onclick="incrementValue()">+</button></div>
             <div><button class="remove-product">Remove</button></div>
             `;
        });
@@ -156,6 +186,7 @@ displayCart=() => {
 
 onLoadCartNumbers();
 displayCart();
+
 
 
 //Paystack Integration
